@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# This script demonstrates basic Bash concepts
+
+# Variables
+name="User"
+current_date=$(date +"%Y-%m-%d")
+
+# User input
+echo "What's your name? "
+read user_name
+
+# Conditional statement
+if [ -n "$user_name" ]; then
+    name=$user_name
+fi
+
+# Function definition
+greet() {
+    echo "Hello, $1! Today is $2."
+}
+
+# Function call
+greet "$name" "$current_date"
+
+# Loop
+echo "Counting from 1 to 5:"
+for i in {1..5}
+do
+    echo $i
+done
+
+# Command substitution and arithmetic
+file_count=$(ls | wc -l)
+echo "There are $file_count files in the current directory."
+echo "Double that number is $((file_count * 2))."
+
+# Exit status
+echo "Script completed successfully."
+exit 0

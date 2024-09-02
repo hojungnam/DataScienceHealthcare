@@ -1,0 +1,7 @@
+#!/bin/bash
+# written by: hjnam
+# job: print hello world!
+
+echo "hello world"
+printf "hello world2\n"
+printf "%s %s\n" hello world3
